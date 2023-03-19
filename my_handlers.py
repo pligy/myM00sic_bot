@@ -43,7 +43,7 @@ async def find_music(message: types.Message):
 async def create_playlist(message: types.Message):
     await message.reply("Список ваших аудио")
 
-@dp.callback_query_handler(lambda message: message.text == "➕")
+@dp.callback_query_handler(text="➕")
 async def send_random_value(callback: types.CallbackQuery):
     await callback.message.answer("Успех")
 
